@@ -1,1 +1,38 @@
-<p>carrinho works!</p>
+<br><p class="titulo">Carrinho de compras</p>
+<div class="row">
+  <div class="col">
+    <table class="table table-striped">
+      <tbody>
+        <tr *ngFor="let item of itens"> 
+          <td class="td-img">
+            <img
+              src="assets/produtos/{{ item.produto.fotos[0] }}"
+              class="card-img-top img-fluid w-75"
+              [alt]=""
+            />
+          </td>
+          <td class="td-col">
+            {{item.produto.nome}}
+          </td>
+          <td class="td-col">
+            {{ item.quantidade }}x - {{ item.produto.preco | currency: "BRL" }}
+          </td>
+        </tr>
+          <tr class="tr-valor">
+              <td colspan=3 class="td-col valor">Total:
+                {{ total | currency: "BRL" }}
+              </td>
+          </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<div class="botao-finalizar">
+    <button
+    type="button"
+    class="btn btn-lg btn-success"
+  >
+    <i class="bi bi-cart-check"></i> Finalizar compra
+  </button>
+</div>
+    
