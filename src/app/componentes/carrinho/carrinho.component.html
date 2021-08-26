@@ -3,42 +3,24 @@
   <div class="col">
     <table class="table table-striped">
       <tbody>
-        <tr> 
+        <tr *ngFor="let item of itens"> 
           <td class="td-img">
             <img
-              src="assets/produtos/produto2.jpg"
+              src="assets/produtos/{{ item.produto.fotos[0] }}"
               class="card-img-top img-fluid w-75"
               [alt]=""
             />
           </td>
           <td class="td-col">
-            Pc Gamer 13 Intel I7 10700 / 16gb Rgb / Ssd 512g / Water Cooler 240
-            / Rtx 3070
+            {{item.produto.nome}}
           </td>
           <td class="td-col">
-            <strong>{{ 19133.27 | currency: "BRL" }}</strong>
+            {{ item.quantidade }}x - {{ item.produto.preco | currency: "BRL" }}
           </td>
         </tr>
-
-        <tr> 
-            <td class="td-img">
-              <img
-                src="assets/produtos/produto2.jpg"
-                class="card-img-top img-fluid w-75"
-                [alt]=""
-              />
-            </td>
-            <td class="td-col">
-              Pc Gamer 13 Intel I7 10700 / 16gb Rgb / Ssd 512g / Water Cooler 240
-              / Rtx 3070
-            </td>
-            <td class="td-col">
-              <strong>{{ 19133.27 | currency: "BRL" }}</strong>
-            </td>
-          </tr>
           <tr class="tr-valor">
               <td colspan=3 class="td-col valor">Total:
-                {{ 19133.27 | currency: "BRL" }}
+                {{ total | currency: "BRL" }}
               </td>
           </tr>
       </tbody>
