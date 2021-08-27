@@ -16,10 +16,6 @@ export class CarrinhoComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  finalizarCompra(){
-
-  }
-
   adicionarCarrinho(produto: Produto){
     return this.carrinhoService.adicionar(produto);
   }
