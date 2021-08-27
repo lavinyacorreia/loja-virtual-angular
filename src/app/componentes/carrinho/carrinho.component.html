@@ -8,15 +8,31 @@
             <img
               src="assets/produtos/{{ item.produto.fotos[0] }}"
               class="card-img-top img-fluid w-75"
-              [alt]=""
             />
           </td>
-          <td class="td-col">
+          <td class="td-col" >
             {{item.produto.nome}}
           </td>
           <td class="td-col">
             {{ item.quantidade }}x - {{ item.produto.preco | currency: "BRL" }}
+            <button
+              type="button"
+              class="btn btn-sm btn-success"
+              (click)="adicionarCarrinho(item.produto)"
+            >
+              <i class="bi bi-plus-lg"></i>
+            </button>
+           
+          <button
+              type="button"
+              class="btn btn-sm btn-danger"
+              (click)="removerCarrinho(item.produto.id)"
+            >
+              <i class="bi bi-trash"></i>
+            </button>
           </td>
+
+          
         </tr>
           <tr class="tr-valor">
               <td colspan=3 class="td-col valor">Total:
@@ -31,8 +47,9 @@
     <button
     type="button"
     class="btn btn-lg btn-success"
+    [routerLink]="['/checkout']"
   >
-    <i class="bi bi-cart-check"></i> Finalizar compra
+    <i class="bi bi-cart-check" ></i> Finalizar compra
   </button>
 </div>
     

@@ -1,1 +1,46 @@
 /* You can add global styles to this file, and also import other style files */
+table{
+    width: 80%;
+
+}
+.td-img{
+    width: 100px;
+    line-height: 100px;
+    height: 100px;
+}
+.td-col{
+    line-height: 100px;
+    height: 100px;
+}
+.titulo{
+    text-align: center;
+    font-size: 25px;
+    margin-left: 100px;
+    font-weight: bold;
+    border-bottom: 2px solid green;
+    width: 250px;
+}
+.valor{
+    text-align: right;
+   padding-right:80px;
+    font-size: 20px;
+    margin-left: 100px;
+    font-weight: bold;
+}
+
+.tr-valor{
+    background-color: rgba(0, 128, 0, 0.156);
+}
+.botao-finalizar{
+    text-align: right;
+    margin-right: 250px;
+}
+
+.btn-pagar {
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  .txt-input {
+    margin-top: 10px;
+  }
