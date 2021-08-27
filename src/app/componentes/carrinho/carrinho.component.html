@@ -17,6 +17,13 @@
           <td class="td-col">
             {{ item.quantidade }}x - {{ item.produto.preco | currency: "BRL" }}
           </td>
+          <button
+              type="button"
+              class="btn btn-sm btn-danger"
+              (click)="removerCarrinho(item.produto.id)"
+            >
+              <i class="bi bi-trash"></i>
+            </button>
         </tr>
           <tr class="tr-valor">
               <td colspan=3 class="td-col valor">Total:
